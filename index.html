@@ -5,31 +5,6 @@
 <div id="app"></div>
 <script src="https://unpkg.com/webamp"></script>
 <script>
-import Webamp from 'webamp';
-
-// Or, if you installed via a script tag, `Winamp` is available on the global `window`:
-// const Winamp = window.Webamp;
-
-// Check if Winamp is supported in this browser
-if(!Webamp.browserIsSupported()) {
-    alert("Oh no! Webamp does not work!")
-    throw new Error("What's the point of anything?")
-}
-const webamp = new Webamp({
-  initialTracks: [{
-    metaData: {
-      artist: "Mojang????",
-      title: "Subwoofer Lullaby",
-    },
-    url: "Volume Alpha - 03 - Subwoofer Lullaby.mp3"
-  }],
-    metaData: {
-      artist: "Mojang????",
-      title: "Minecraft",
-    },
-    url: "Volume Alpha - 08 - Minecraft.mp3"
-  }],
-  }],
 webamp.renderWhenReady(document.getElementById('winamp-container'));
     const app = document.getElementById("app")
     const webamp = new Webamp();
