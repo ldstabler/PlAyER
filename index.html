@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+<div id="app"></div>
+<script src="https://unpkg.com/webamp"></script>
+<script>
+import Webamp from 'webamp';
+
+// Or, if you installed via a script tag, `Winamp` is available on the global `window`:
+// const Winamp = window.Webamp;
+
+// Check if Winamp is supported in this browser
+if(!Webamp.browserIsSupported()) {
+    alert("Oh no! Webamp does not work!")
+    throw new Error("What's the point of anything?")
+}
+const webamp = new Webamp({
+  initialTracks: [{
+    metaData: {
+      artist: "DJ Mike Llama",
+      title: "Llama Whippin' Intro",
+    },
+    url: "path/to/mp3/llama-2.91.mp3"
+  }],
+webamp.renderWhenReady(document.getElementById('winamp-container'));
+    const app = document.getElementById("app")
+    const webamp = new Webamp();
+    webamp.renderWhenReady(app);
+</script>
+</body>
+</html>
